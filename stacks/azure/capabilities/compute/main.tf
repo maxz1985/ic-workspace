@@ -1,6 +1,6 @@
 module "compute_instance" {
   # In production: app.terraform.io/<ORG>/compute-instance/azurerm
-  source = "../../../modules/azure/compute-instance"
+  source = "../../../../modules/azure/compute-instance"
 
   name                = var.compute.name
   vm_size             = var.compute.size

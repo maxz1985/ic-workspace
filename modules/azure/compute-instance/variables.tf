@@ -5,7 +5,10 @@ variable "vm_size"             { type = string }
 variable "subnet_id"           { type = string }
 variable "source_image_id"     { type = string }
 variable "os_disk_size_gb"     { type = number }
-variable "system_assigned_identity" { type = bool, default = true }
+variable "system_assigned_identity"{ 
+  type = bool
+  default = true 
+}
 variable "tags"                { type = map(string) }
 variable "admin_username" {
   type        = string

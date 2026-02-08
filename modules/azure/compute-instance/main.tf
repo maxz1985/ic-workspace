@@ -32,6 +32,7 @@ resource "azurerm_linux_virtual_machine" "this" {
   os_disk {
     storage_account_type = "Premium_LRS"
     disk_size_gb         = var.os_disk_size_gb
+    caching              = "ReadWrite"
   }
 
   dynamic "identity" {

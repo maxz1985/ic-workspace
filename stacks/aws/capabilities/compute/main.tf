@@ -11,7 +11,7 @@
  */
 
 module "compute_instance" {
-  source = "../../../modules/aws/compute-instance"
+  source = "../../../../modules/aws/compute-instance"
 
   name                = var.compute.name
   instance_type       = var.compute.size

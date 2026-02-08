@@ -1,6 +1,6 @@
 module "compute_instance" {
   # In production: app.terraform.io/<ORG>/compute-instance/google
-  source = "../../../modules/gcp/compute-instance"
+  source = "../../../../modules/gcp/compute-instance"
 
   name         = var.compute.name
   machine_type = var.compute.size
