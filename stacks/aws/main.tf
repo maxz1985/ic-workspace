@@ -12,7 +12,7 @@
 
 module "compute" {
   # "enabled" is part of the promoted shape. If disabled, the capability is a no-op.
-  count  = try(var.compute.enabled, false) ? 1 : 0
+  count = try(var.compute.enabled, false) ? 1 : 0
 
   # Local capability module (composition boundary)
   source = "./capabilities/compute"

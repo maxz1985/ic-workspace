@@ -15,14 +15,14 @@ variable "compute" {
     })
 
     azure = optional(object({
-    source_image_id          = string
-    location                 = string
-    resource_group_name      = string
-    system_assigned_identity = optional(bool)
+      source_image_id          = string
+      location                 = string
+      resource_group_name      = string
+      system_assigned_identity = optional(bool)
 
-    # Runnable demo: how we provide SSH access without committing keys to Git
-    ssh_public_key_path = string
-    admin_username      = optional(string) # defaults to "azureuser" in module
+      # Runnable demo: how we provide SSH access without committing keys to Git
+      ssh_public_key_path = string
+      admin_username      = optional(string) # defaults to "azureuser" in module
     }))
 
   })

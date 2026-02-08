@@ -9,7 +9,7 @@ compute = {
   }
 
   gcp = {
-    source_image          = "projects/debian-cloud/global/images/family/debian-12"
+    source_image = "projects/debian-cloud/global/images/family/debian-12"
     # network_tags        = ["web"]
     # service_account_email = "svc-demo@<PROJECT>.iam.gserviceaccount.com"
   }
