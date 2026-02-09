@@ -44,10 +44,15 @@ variable "compute" {
     disk_gb = number
 
     /**
-     * Placement-related intent.
-     * subnet_ref is always required.
-     * zone is optional and only meaningful for zonal clouds (e.g. GCP).
-     */
+    * Placement-related intent.
+    *
+    * subnet_ref is always required.
+    *
+    * zone is optional:
+    * - Required by some clouds (e.g. GCP)
+    * - Implicit via subnet in others (e.g. AWS)
+    * - Optional / opt-in in some (e.g. Azure)
+    */
     placement = object({
       subnet_ref = string
       zone       = optional(string)
